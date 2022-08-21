@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+    <img class="logo" src="assets/img/logo.png" alt="logo alura">
+    
+    <div class="encriptador">
+        <div class="contenedor_encriptador">
+            <textarea class="caja_encriptador" name="" id="entrada" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="botones_encriptador">
+                <p>
+                    <i class="fa-solid fa-circle-exclamation" style="color: #0A3871;"></i>
+                    Solo letras minúsculas y sin acentos
+                </p>
+                
+                <button class="boton_encriptar" id="boton_encriptar" onclick="boton_encriptar()">Encriptar</button>
+                <button class="boton_desencriptar" onclick="boton_desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+    
+        <div class="contenedor_desencriptador">
+            <div class="contenido_desencriptador">
+                <div class="contenido_inicial">
+                    <img src="assets/img/data-encryption.png" alt="" class="img_encripcion">
+                    <p class="titulo"><b>Encriptación/Desencriptación</b></p>
+                    <p class="subtitulo">Aquí se mostrará su contenido encriptado o desencriptado según corresponda.</p>
+                </div>
+    
+                <div class="contenido_no_encontrado">
+                    <img src="assets/img/404.png" alt="" class="no_encontrado">
+                    <p class="titulo"><b>Ningún mensaje fue encontrado</b></p>
+                    <p class="subtitulo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+    
+                <div class="contenido_encontrado">
+                    <textarea readonly name="" id="" cols="30" rows="10" class="caja_desencriptador"></textarea>
+                    <button onclick="copiar()" class="boton_copiar">Copiar</button>
+                </div>
+                <div class="copiado">
+                    <p><i class="fa-solid fa-circle-check"></i> Texto copiado con exito</p>
+                </div>
+            </div>
+
+            <footer>
+                <p class="copi">&copy 2022 Desarrollado por <span class="nombre"><b>Yerco Ruiz Moncada</b></span></p>
+                <div class="redes">
+                    <a href="https://github.com/YercoRM" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+        
+                    <a href="https://www.linkedin.com/in/yerco-ruiz-moncada/" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+        
+                    <a href="https://www.instagram.com/yerkourpk/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+    <script src="encriptar.js"></script>
+</body>
+</html>
