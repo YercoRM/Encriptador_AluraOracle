@@ -15,7 +15,7 @@ document.querySelector(".contenido_encontrado").style.display = 'none';
 document.querySelector(".copiado").style.display = 'none';
 
 function boton_encriptar(){
-    if(entrada.value == ""){
+    if(entrada.value.trim() === ""){
         document.querySelector(".contenido_inicial").style.display = 'none';
         document.querySelector(".contenido_no_encontrado").style.display = 'block';
         document.querySelector(".contenido_encontrado").style.display = 'none';
@@ -26,7 +26,7 @@ function boton_encriptar(){
         document.querySelector(".contenido_encontrado").style.display = 'block';
         document.querySelector(".copiado").style.display = 'none';
     }
-    var texto = encriptar(entrada.value);
+    var texto = encriptar(entrada.value.trim());
     salida.value = texto;
     salida.style.backgroundImage = "none";
     entrada.value = ""
